@@ -352,7 +352,7 @@ function renderProduct(product) {
     <div class="card-contain col-10 col-sm-6 col-md-4 col-lg-3 col">
         <article data-id="${product.id}" class="card-item d-flex flex-column justify-content-between bg-secondary-subtle border border-black border-opacity-10 overflow-hidden rounded-5 shadow">
             <div class="card-thumbs position-relative pt-100 rounded-top-5">
-                <a class="thumb-link link-detail position-absolute inset-full flex-center p-4 border-bottom" href="/product-details.html?id=${product.id}">
+                <a class="thumb-link link-detail position-absolute inset-full flex-center p-4 border-bottom" href="./product-details.html?id=${product.id}">
                     <img loading="lazy" class="card-img object-fit-contain rounded-4" src="${product.thumbnail}" alt="Product Image" />
                 </a>
                 <span class="card-favourite flex-center position-absolute shadow cursor-pointer z-3">
@@ -460,7 +460,7 @@ function renderFavourite(modal) {
   if (itemsList) itemsList.innerHTML = "Bạn chưa chọn sản phẩm nào!";
 
   if (favoriteList?.length !== 0 && itemsList) {
-    if (showDetail) showDetail.href = `/product-details.html?id=${favoriteList[0].id}`;
+    if (showDetail) showDetail.href = `./product-details.html?id=${favoriteList[0].id}`;
 
     itemsList.innerHTML = favoriteList
       .map((favorite) => {
@@ -468,7 +468,7 @@ function renderFavourite(modal) {
           <div class="card-contain card-favorite-contain col col">
             <article class="card-item d-flex flex-column">
               <div class="card-thumbs position-relative pt-100 mb-2 border border-black border-opacity-50 rounded-4">
-                <a class="thumb-link link-detail position-absolute inset-full flex-center p-2" href="/product-details.html?id=${favorite.id}">
+                <a class="thumb-link link-detail position-absolute inset-full flex-center p-2" href="./product-details.html?id=${favorite.id}">
                   <img loading="lazy" class="card-img object-fit-contain p-4 bg-black bg-opacity-05 rounded-4" src="${favorite.thumbnail}" alt="${favorite.title}" />
                 </a>
               </div>
