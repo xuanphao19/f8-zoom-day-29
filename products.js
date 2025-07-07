@@ -254,7 +254,7 @@ function renderProductDetail(detail, element) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const productDetail = JSON.parse(localStorage.getItem("productDetail"));
+  const productDetail = getProductData("productDetail");
   const detailEl = document.querySelector(".product-detail");
 
   if (productDetail) {
@@ -263,7 +263,7 @@ document.addEventListener("DOMContentLoaded", () => {
     detailEl.innerHTML = "<p>Không tìm thấy sản phẩm.</p>";
   }
 
-  if (window.location.pathname !== "/product-details.html") {
+  if (window.location.pathname !== "/f8-zoom-day-29/product-details.html") {
     localStorage.removeItem("productDetail");
   }
 });
