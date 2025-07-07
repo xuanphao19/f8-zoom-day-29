@@ -1,10 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>product-details</title>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <title>Chi tiết sản phẩm</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./products.css" />
 
-    <body></body>
+    <svg id="SVG-Store" class="w-0 h-0 position-absolute bt-n100 hide">
+      <symbol viewBox="0 0 20 21" fill="none" id="trolley">
+        <path
+          d="M0.750122 1.24988L2.83012 1.60988L3.79312 13.0829C3.87012 14.0199 4.65312 14.7389 5.59312 14.7359H16.5021C17.3991 14.7379 18.1601 14.0779 18.2871 13.1899L19.2361 6.63188C19.3421 5.89888 18.8331 5.21888 18.1011 5.11288C18.0371 5.10388 3.16412 5.09888 3.16412 5.09888"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <path
+          d="M12.1251 8.7948H14.8981"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M5.15447 18.202C5.45547 18.202 5.69847 18.446 5.69847 18.746C5.69847 19.047 5.45547 19.291 5.15447 19.291C4.85347 19.291 4.61047 19.047 4.61047 18.746C4.61047 18.446 4.85347 18.202 5.15447 18.202Z"
+          fill="currentColor"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M16.4347 18.202C16.7357 18.202 16.9797 18.446 16.9797 18.746C16.9797 19.047 16.7357 19.291 16.4347 19.291C16.1337 19.291 15.8907 19.047 15.8907 18.746C15.8907 18.446 16.1337 18.202 16.4347 18.202Z"
+          fill="currentColor"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </symbol>
+      <symbol id="heart" viewBox="0 0 24 24" fill="none">
+        <path
+          id="Stroke 1"
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M2.87187 11.5983C1.79887 8.24832 3.05287 4.41932 6.56987 3.28632C8.41987 2.68932 10.4619 3.04132 11.9999 4.19832C13.4549 3.07332 15.5719 2.69332 17.4199 3.28632C20.9369 4.41932 22.1989 8.24832 21.1269 11.5983C19.4569 16.9083 11.9999 20.9983 11.9999 20.9983C11.9999 20.9983 4.59787 16.9703 2.87187 11.5983Z"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <path
+          id="Stroke 3"
+          d="M16 6.69995C17.07 7.04595 17.826 8.00095 17.917 9.12195"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </symbol>
+      <symbol id="heart-red" viewBox="0 0 40 38" fill="none">
+        <g id="Stroke 1" filter="url(#filter0_d_4007_6659)">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M10.8719 14.5983C9.79887 11.2483 11.0529 7.41932 14.5699 6.28632C16.4199 5.68932 18.4619 6.04132 19.9999 7.19832C21.4549 6.07332 23.5719 5.69332 25.4199 6.28632C28.9369 7.41932 30.1989 11.2483 29.1269 14.5983C27.4569 19.9083 19.9999 23.9983 19.9999 23.9983C19.9999 23.9983 12.5979 19.9703 10.8719 14.5983Z"
+            fill="#F94545"></path>
+        </g>
+        <path
+          id="Stroke 3"
+          d="M24 9.69995C25.07 10.046 25.826 11.001 25.917 12.122"
+          stroke="white"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <defs>
+          <filter
+            id="filter0_d_4007_6659"
+            x="0.5"
+            y="0"
+            width="38.9971"
+            height="37.9983"
+            filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+            <feColorMatrix
+              in="SourceAlpha"
+              type="matrix"
+              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+              result="hardAlpha"></feColorMatrix>
+            <feOffset dy="4"></feOffset>
+            <feGaussianBlur stdDeviation="5"></feGaussianBlur>
+            <feComposite in2="hardAlpha" operator="out"></feComposite>
+            <feColorMatrix
+              type="matrix"
+              values="0 0 0 0 0.976471 0 0 0 0 0.270588 0 0 0 0 0.270588 0 0 0 0.2 0"></feColorMatrix>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_4007_6659"></feBlend>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_4007_6659" result="shape"></feBlend>
+          </filter>
+        </defs>
+      </symbol>
+      <symbol viewBox="0 0 18 18" fill="none" id="star-full">
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M10.1043 1.17701L11.9317 4.82776C12.1108 5.18616 12.4565 5.43467 12.8573 5.49218L16.9453 6.08062C17.9554 6.22644 18.3573 7.45054 17.6263 8.15194L14.6702 10.9924C14.3797 11.2718 14.2474 11.6733 14.3162 12.0676L15.0138 16.0778C15.1856 17.0698 14.1298 17.8267 13.227 17.3574L9.57321 15.4627C9.21502 15.2768 8.78602 15.2768 8.42679 15.4627L4.773 17.3574C3.87023 17.8267 2.81439 17.0698 2.98724 16.0778L3.68385 12.0676C3.75257 11.6733 3.62033 11.2718 3.32982 10.9924L0.37368 8.15194C-0.357285 7.45054 0.0446417 6.22644 1.05466 6.08062L5.14265 5.49218C5.54354 5.43467 5.89028 5.18616 6.06937 4.82776L7.89574 1.17701C8.34765 0.274331 9.65235 0.274331 10.1043 1.17701Z"
+          fill="currentColor"></path>
+      </symbol>
+    </svg>
+  </head>
+
+  <body>
+    <header
+      id="header-site"
+      class="header-site w-100 top-0 flex-center bg-secondary user-select-none shadow-sm change-height">
+      <div class="bgr-header position-absolute top-0 start-0 w-100 h-100 z-n1"></div>
+      <div class="flex-center container">
+        <div class="header-inner position-relative d-flex align-items-center justify-content-lg-between w-100">
+          <div class="d-flex align-items-center col-lg-8 flex-row-reverse flex-md-row flex-grow-1">
+            <div class="logo flex-grow-1 flex-md-grow-0 pe-md-5">
+              <a class="p-2 ps-0 flex-shrink-0" href="/">
+                <span class="d-flex text-primary flex-shrink-0 fst-italic fw-semibold">Products</span>
+              </a>
+            </div>
+            <div class="d-flex flex-md-grow-1 flex-shrink-0 justify-content-md-center">
+              <ul class="nav-site d-none d-lg-flex fs-5 ps-0">
+                <li class="nav-item fw-medium position-relative">
+                  <a
+                    id="link1"
+                    href="/"
+                    class="nav-link d-flex align-items-center gap-3 py-3 px-4 z-3 text-body-emphasis active">
+                    <span class="item-text">Home</span>
+                  </a>
+                </li>
+                <li class="nav-item fw-medium position-relative">
+                  <a id="a" href="/" class="nav-link d-flex align-items-center gap-3 py-3 px-4 z-3 text-body-emphasis">
+                    <span class="item-text">About</span>
+                  </a>
+                </li>
+                <li class="nav-item fw-medium position-relative">
+                  <a
+                    id="link3"
+                    href="/product-details.html"
+                    class="nav-link link-detail d-flex align-items-center gap-3 py-3 px-4 z-3 text-body-emphasis">
+                    <span class="item-text">Product</span>
+                  </a>
+                </li>
+                <li class="nav-item d-none d-lg-flex fw-medium">
+                  <a
+                    id="link4"
+                    class="nav-link contact d-flex align-items-center gap-3 py-3 px-4 z-3 text-body-emphasis"
+                    href="/">
+                    <span class="item-text">Contact</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="header-control d-inline-flex align-items-center ms-auto">
+            <div class="header-ctrl flex-center gap-3">
+              <div class="d-flex align-items-center gap-4">
+                <div class="d-flex align-items-center">
+                  <div
+                    class="favourite-btn d-flex align-items-center border border-end-0 rounded-start-3 bg-body shadow-sm h-100">
+                    <div class="btn-toggle-modal cursor-pointer d-flex" aria-expanded="false">
+                      <span class="favourite flex-center">
+                        <svg name="heart2" class="svg-icon card-icon">
+                          <use xlink:href="#heart-red"></use>
+                        </svg>
+                        <span class="count-liked">0</span>
+                      </span>
+                    </div>
+                  </div>
+                  <!--  -->
+                  <div class="modal-favourite p-5 rounded-4 bg-body">
+                    <div class="favourite-content d-flex flex-column gap-3 pb-3 px-5 fs-5">
+                      <div class="modal-titles d-flex align-items-center justify-content-between py-2">
+                        <h2 class="modal-title fs-3">Products you liked</h2>
+                        <span class="favourite-count py-2 ps-4 fs-4 text-body fw-normal fst-italic hover-8">
+                          11 item(s)
+                        </span>
+                      </div>
+
+                      <div
+                        class="items-list favourite-items-list py-3 row row-cols-3 gx-4 border-bottom border-2 row"></div>
+                      <a
+                        class="link-detail show-detail mt-4 ms-auto w-65 p-3 fs-3 text-center fw-medium rounded-pill text-bg-warning hover-8"
+                        href="/product-details.html">
+                        Show Details
+                      </a>
+                    </div>
+                  </div>
+                  <!--  -->
+                  <div
+                    class="cart-btn d-none d-sm-flex position-relative d-flex align-items-center ps-xl-2 border border-start-0 rounded-end-3 bg-body shadow-sm">
+                    <div class="btn-toggle-modal cursor-pointer d-flex">
+                      <span class="cart-icon flex-center">
+                        <svg name="trolley" class="svg-icon card-icon p-4">
+                          <use xlink:href="#trolley"></use>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="btn-toggle-modal cursor-pointer d-flex" aria-expanded="false">
+                  <div class="avatar-ctrl">
+                    <span class="avatar flex-center header-avatar">
+                      <img
+                        loading="lazy"
+                        class="ratio-1x1 rounded-pill d-flex hover-8"
+                        src="https://files.fullstack.edu.vn/f8-prod/user_avatars/36050/649fc3c653f2c.png"
+                        alt="Image" />
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <h1 class="container fs-1 mt-5 p-5">Chi tiết sản phẩm:</h1>
+
+    <div class="product-detail container mt-5"></div>
+
+    <script src="./products.js" defer></script>
+  </body>
 </html>
