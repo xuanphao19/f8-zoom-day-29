@@ -254,19 +254,17 @@ function renderProductDetail(detail, element) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  if (window.location.pathname === "/product-details.html") {
-    const productDetail = JSON.parse(localStorage.getItem("productDetail"));
-    const detailEl = document.querySelector(".product-detail");
+  const productDetail = JSON.parse(localStorage.getItem("productDetail"));
+  const detailEl = document.querySelector(".product-detail");
 
-    if (productDetail) {
-      renderProductDetail(productDetail, detailEl);
-    } else if (detailEl) {
-      detailEl.innerHTML = "<p>Không tìm thấy sản phẩm.</p>";
-    }
+  if (productDetail) {
+    renderProductDetail(productDetail, detailEl);
+  } else if (detailEl) {
+    detailEl.innerHTML = "<p>Không tìm thấy sản phẩm.</p>";
+  }
 
-    if (window.location.pathname !== "/product-details.html") {
-      localStorage.removeItem("productDetail");
-    }
+  if (window.location.pathname !== "/product-details.html") {
+    localStorage.removeItem("productDetail");
   }
 });
 
