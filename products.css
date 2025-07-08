@@ -16804,6 +16804,7 @@ body:has([data-tippy-root] .modal-address) [data-tippy-root]:has(.modal-address)
   flex: 1;
   align-items: flex-end;
 }
+
 .icon-heart-detail .heart {
-  width: 30px;
+  width: 35px;
 }
